@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function contract_management_schema() {
+  $schema['contract_management'] = [
+    'description' => 'Table used to store contract details.',
+    'fields' => [
+      'id' => [
+        'description' => 'Holds the id',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'name' => [
+        'description' => 'Holds the name',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+      'description' => [
+        'description' => 'Holds user description',
+        'type' => 'text',
+        'not null' => FALSE,
+      ],
+      'file' => [
+        'description' => 'Holds file name for template',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+      ],
+      'fileid' => [
+        'description' => 'Holds file id',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'data' => [
+        'description' => 'Holds field data',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'description' => 'Timestamp when the entity was created.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

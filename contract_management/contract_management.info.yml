@@ -1,0 +1,5 @@
+name: 'Contract Management'
+type: module
+description: 'Manage contracts, upload templates, generate documents with dynamic fields.'
+core_version_requirement: ^10
+package: Custom

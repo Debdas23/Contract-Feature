@@ -1,0 +1,23 @@
+contract_management.contracts:
+  path: '/organization/contracts'
+  defaults:
+    _controller: '\Drupal\contract_management\Controller\ContractController::contractsPage'
+    _title: 'Contracts'
+  requirements:
+    _permission: 'access content'
+
+contract_management.contract_add:
+  path: '/organization/contracts/add'
+  defaults:
+    _form: '\Drupal\contract_management\Form\ContractForm'
+    _title: 'Add Contract'
+  requirements:
+    _permission: 'access content'
+
+contract_management.document_automation:
+  path: '/organization/document/automation'
+  defaults:
+    _form: '\Drupal\contract_management\Form\DocumentAutomation'
+    _title: 'Document Automation'
+  requirements:
+    _permission: 'access content'
