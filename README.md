@@ -1,4 +1,27 @@
 # Contract Management Module
+#Requirement
+Contract feature
+
+There needs to be a new tab under Organization called Contracts.  You should be able to add a contract.  Adding a new contract, the user will be asked to upload a Word document with their template.  
+
+Create a new contract: Create a contract, give it a name and upload a document. 
+
+Scan the document: The word document will include variables which are wrapped in double curly braces.  For example {{first_name}} or {{First Name}}.  Some variables will be repeated many times over in the Word document.  So you need to find all unique variables in the document. Also warn the user if there are any issues parsing the document.
+
+Create fields for each variable: For each of the unique variables in the doc, we need to create a field for the contract. Show the name that appeared in the document in the curly braces and then allow the user to enter:
+Display field title
+Field type (text, number, date, email, select list)
+Help text
+Default value
+If the field type is a select list, allow the user to enter options for that list
+
+Creating a matter: When creating a matter for a user that’s part of an organisation, we will offer them the option of selecting a contract.  This can be part of the new matter wizard.  When they select the contract, we will expose the fields and the user will need to enter those fields.  Then the matter gets created as normal and these fields are linked to the matter as part of the contact request.
+
+Document automation step: When creating the matter, generate the completed document in Word format and put it under a new tab called Contract. For now, only lawyers will be able to see and download the contract.  An email needs to be sent to the lawyer telling them that the contract is 
+
+Review before publishing: There should be a setting for the contract feature which dictates whether contracts are reviewed before they are visible to the user that requested the matter.  If it's switched on then the requester will automatically see the contract and they can download it in doc format.  If not, the lawyer first needs to see it.  They will have the option to edit (using the upcoming doc editing functionality).  Then when they are happy, the can publish at which point the requester will see the document too.
+
+
 
 ## Overview
 
